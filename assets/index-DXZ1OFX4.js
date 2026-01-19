@@ -17,7 +17,7 @@ Please change the parent <Route path="${Q}"> to <Route path="${Q==="/"?"*":`${Q}
 `,sS=at.img`
   width: 200px;
   height: 100px;
-`,oS="/assets/logo-Bu9E4Y30.svg",dS=()=>q.jsx(cS,{children:q.jsx(fS,{to:"/",children:q.jsx(sS,{src:oS,alt:"EPL logo"})})}),hS=at.nav`
+`,oS="/english-premier-league/assets/logo-Bu9E4Y30.svg",dS=()=>q.jsx(cS,{children:q.jsx(fS,{to:"/",children:q.jsx(sS,{src:oS,alt:"EPL logo"})})}),hS=at.nav`
   ul {
     display: flex;
     gap: 36px;
@@ -81,7 +81,7 @@ Please change the parent <Route path="${Q}"> to <Route path="${Q==="/"?"*":`${Q}
     img{
         width: 100%;
     }
-`,TS="/assets/logo-footer-k_c-unPe.svg",xS=()=>q.jsx(vS,{children:q.jsxs(bS,{children:[q.jsx(SS,{children:"© 2026 Premier League"}),q.jsx(ES,{children:q.jsx("img",{src:TS,alt:"Logo Premier League"})})]})}),AS=at.div`
+`,TS="/english-premier-league/assets/logo-footer-k_c-unPe.svg",xS=()=>q.jsx(vS,{children:q.jsxs(bS,{children:[q.jsx(SS,{children:"© 2026 Premier League"}),q.jsx(ES,{children:q.jsx("img",{src:TS,alt:"Logo Premier League"})})]})}),AS=at.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
