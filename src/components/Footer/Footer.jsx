@@ -3,6 +3,7 @@ import {
   FooterCopyright,
   FooterLogo,
   FooterWrapper,
+  Link
 } from "./Footer.styled";
 import icon from "../../assets/svg/logo-footer.svg";
 
@@ -11,9 +12,11 @@ const Footer = () => {
     <FooterWrapper>
       <FooterContainer>
         <FooterCopyright>&copy; 2026 Premier League</FooterCopyright>
-        <FooterLogo>
-          <img src={icon} alt="Logo Premier League" />
-        </FooterLogo>
+        <Link to='/'>
+          <FooterLogo>
+            <img src={icon} alt="Logo Premier League" />
+          </FooterLogo>
+        </Link>
       </FooterContainer>
     </FooterWrapper>
   );

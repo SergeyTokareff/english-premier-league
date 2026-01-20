@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -17,6 +18,9 @@ export const FooterContainer = styled.div`
 `
 
 export const FooterCopyright = styled.span`
+    
+`
+export const Link =styled(NavLink)`
     
 `
 
