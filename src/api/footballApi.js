@@ -4,28 +4,20 @@ import api from './axios'
  * Отримати турнірну таблицю Англійської Премʼєр-ліги
  */
 export const getStandings = async () => {
-  try {
-    const response = await api.get('/competitions/PL/standings')
-
-    // Беремо тільки таблицю (без зайвих даних)
-    return response.data.standings[0].table
-  } catch (error) {
-    console.error('Error fetching standings:', error)
-    throw error
-  }
+  const response = await fetch(
+    `/api/football?path=competitions/PL/standings`
+  );
+  const data = await response.json();
+  return data.standings[0].table;
 }
 
 /**
  * Отримати матчі Англійської Премʼєр-ліги
  */
 export const getMatches = async () => {
-  try {
-    const response = await api.get('/competitions/PL/matches')
-
-    // Дані матчів
-    return response.data.matches
-  } catch (error) {
-    console.error('Error fetching matches:', error)
-    throw error
-  }
+  const response = await fetch(
+    `/api/football?path=competitions/PL/matches`
+  );
+  const data = await response.json();
+  return data.matches;
 }
