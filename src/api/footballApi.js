@@ -1,19 +1,31 @@
-export const getMatches = async () => {
-  const res = await fetch(
-    `/api/apiHandler?path=competitions/PL/matches`
-  );
+import api from './axios'
 
-  if (!res.ok) throw new Error("Failed to fetch matches");
-  const data = await res.json();
-  return data.matches;
+/**
+ * Отримати турнірну таблицю Англійської Премʼєр-ліги
+ */
+export const getStandings = async () => {
+  try {
+    const response = await api.get('/competitions/PL/standings')
+
+    // Беремо тільки таблицю (без зайвих даних)
+    return response.data.standings[0].table
+  } catch (error) {
+    console.error('Error fetching standings:', error)
+    throw error
+  }
 }
 
-export const getStandings = async () => {
-  const res = await fetch(
-    `/api/apiHandler?path=competitions/PL/standings`
-  );
+/**
+ * Отримати матчі Англійської Премʼєр-ліги
+ */
+export const getMatches = async () => {
+  try {
+    const response = await api.get('/competitions/PL/matches')
 
-  if (!res.ok) throw new Error("Failed to fetch standings");
-  const data = await res.json();
-  return data.standings[0].table;
+    // Дані матчів
+    return response.data.matches
+  } catch (error) {
+    console.error('Error fetching matches:', error)
+    throw error
+  }
 }
